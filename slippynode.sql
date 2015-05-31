@@ -95,8 +95,8 @@ CREATE TABLE nodeverses_comments (
 
 ALTER TABLE nodeverses_comments OWNER TO slippynode_user;
 
-CREATE TABLE nodeverses_comment_reply_notifications (
-    nodeverses_comment_reply_notifications_id SERIAL PRIMARY KEY,
+CREATE TABLE nodeverses_comments_reply_notifications (
+    nodeverses_comments_reply_notifications_id SERIAL PRIMARY KEY,
     nodeverses_comments_id INTEGER REFERENCES nodeverses_comments(nodeverses_comments_id),
     nodeverses_submissions_id INTEGER REFERENCES nodeverses_submissions(nodeverses_submissions_id),
     recipient_users_id INTEGER REFERENCES users(users_id),
@@ -107,7 +107,7 @@ CREATE TABLE nodeverses_comment_reply_notifications (
     created_datetime TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-ALTER TABLE nodeverses_comment_reply_notifications OWNER TO slippynode_user;
+ALTER TABLE nodeverses_comments_reply_notifications OWNER TO slippynode_user;
 
 CREATE TABLE users_comments_saves (
     users_comments_saves_id SERIAL PRIMARY KEY,
@@ -127,13 +127,13 @@ CREATE TABLE users_comments_votes (
 
 ALTER TABLE users_comments_votes OWNER TO slippynode_user;
 
-CREATE TABLE nodeverses_default (
-    nodeverses_default_id SERIAL PRIMARY KEY,
+CREATE TABLE nodeverses_defaults (
+    nodeverses_defaults_id SERIAL PRIMARY KEY,
     nodeverses_id INTEGER REFERENCES nodeverses(nodeverses_id),
     nodeverses_name VARCHAR (250)
 );
 
-ALTER TABLE nodeverses_default OWNER TO slippynode_user;
+ALTER TABLE nodeverses_defaults OWNER TO slippynode_user;
 
 CREATE TABLE nodeverses_featured (
     nodeverses_featured_id SERIAL PRIMARY KEY,

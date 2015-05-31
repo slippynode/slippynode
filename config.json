@@ -1,0 +1,12 @@
+{
+  "db": {
+    "client": "postgres",
+    "connection": {
+      "host": "127.0.0.1",
+      "user": "slippynode_user",
+      "password": "password",
+      "database": "slippynode_db",
+      "charset": "utf8"
+    }
+  }
+}
