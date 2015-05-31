@@ -135,3 +135,29 @@ UsersPreferences = bookshelf.Model.extend({
   tableName: 'users_preferences',
   idAttribute: 'users_preferences_id',
 });
+
+module.exports = {
+  'Users': Users,
+  'UsersLogin': UsersLogin,
+  'BannedDomains': BannedDomains,
+  'BannedUsers': BannedUsers,
+  'Nodeverses': Nodeverses,
+  'NodeversesSubmissions': NodeversesSubmissions,
+  'NodeversesComments': NodeversesComments,
+  'NodeversesCommentsReplyNotifications':
+    NodeversesCommentsReplyNotifications,
+  'UsersCommentsSaves': UsersCommentsSaves,
+  'UsersCommentsVotes': UsersCommentsVotes,
+  'NodeversesDefaults': NodeversesDefaults,
+  'NodeversesFeatured': NodeversesFeatured,
+  'NodeversesCategories': NodeversesCategories,
+  'NodeversesTags': NodeversesTags,
+  'NodeversesAdmins': NodeversesAdmins,
+  'NodeversesBannedUsers': NodeversesBannedUsers,
+  'NodeversesSubmissionsReplyNotifications':
+    NodeversesSubmissionsReplyNotifications,
+  'NodeversesStickySubmissions': NodeversesStickySubmissions,
+  'UsersPrivateMessages': UsersPrivateMessages,
+  'UsersSubscriptions': UsersSubscriptions,
+  'UsersPreferences': UsersPreferences
+};
