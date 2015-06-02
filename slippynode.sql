@@ -54,6 +54,7 @@ CREATE TABLE nodeverses (
     private BOOLEAN,
     anonymous_mode BOOLEAN,
     last_submission_received_datetime TIMESTAMP,
+    created_by_users_id INTEGER REFERENCES users(users_id),
     creation_datetime TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
